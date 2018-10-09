@@ -9,9 +9,13 @@ RUN apt-get update ; apt-get -y install vim less
 ADD assets/dot.bashrc /root/.bashrc
 ADD assets/dot.vimrc /root/.vimrc
 
-# Install packages
-RUN ["npm", "install", "-g", "gulp"]
-RUN ["npm", "install", "-g", "typescript"]
+# Install global packages
+ENV NPM_REGISTRY "https://registry.npmjs.org"
+
+RUN npm install -g --registry $NPM_REGISTRY \
+        mocha \
+        webpack \
+        webpack-cli
 
 # Run
 ENTRYPOINT ["/bin/bash"]
