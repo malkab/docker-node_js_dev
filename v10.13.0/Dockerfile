@@ -1,4 +1,4 @@
-FROM node:9.10.1
+FROM node:10.13.0
 
 LABEL author="Juan Pedro Perez"
 LABEL email="jp.perez.alcantara@gmail.com"

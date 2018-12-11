@@ -15,6 +15,7 @@ ENV NPM_REGISTRY "https://registry.npmjs.org"
 RUN npm install -g --registry $NPM_REGISTRY \
         mocha \
         webpack \
+        sass \
         webpack-cli
 
 # Run
