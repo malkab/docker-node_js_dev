@@ -16,7 +16,8 @@ RUN npm install -g --registry $NPM_REGISTRY \
         mocha \
         webpack \
         sass \
-        webpack-cli
+        webpack-cli \
+        typedoc
 
 # Run
 ENTRYPOINT ["/bin/bash"]
