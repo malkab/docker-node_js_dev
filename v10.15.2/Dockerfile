@@ -17,7 +17,8 @@ RUN npm install -g --registry $NPM_REGISTRY \
         webpack \
         sass \
         webpack-cli \
-        typedoc
+        typedoc \
+        npm
 
 # Run
 ENTRYPOINT ["/bin/bash"]
