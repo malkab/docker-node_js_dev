@@ -1,9 +1,10 @@
-FROM node:10.15.2
+FROM node:10.16.0
 
 LABEL author="Juan Pedro Perez"
 LABEL email="jp.perez.alcantara@gmail.com"
 
 RUN apt-get update ; apt-get -y install vim less
+RUN chmod 777 /root
 
 # Some niceties
 ADD assets/dot.bashrc /root/.bashrc
@@ -17,9 +18,10 @@ RUN npm install -g --registry $NPM_REGISTRY \
         webpack \
         sass \
         webpack-cli \
-        typedoc \
-        npm \
-        @angular/cli
+        @angular/cli \
+        typescript \
+        webpack-dev-server \
+        http-server
 
 # Run
 ENTRYPOINT ["/bin/bash"]
