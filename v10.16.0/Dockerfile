@@ -12,8 +12,9 @@ ADD assets/dot.vimrc /root/.vimrc
 
 # Install global packages
 ENV NPM_REGISTRY "https://registry.npmjs.org"
+ENV NODE_PATH "/usr/local/lib/node_modules/:/usr/local/share/.config/yarn/global/node_modules"
 
-RUN npm install -g --registry $NPM_REGISTRY \
+RUN yarn global add --registry $NPM_REGISTRY \
         mocha \
         webpack \
         sass \
