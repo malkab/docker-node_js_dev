@@ -9,6 +9,12 @@ RUN chmod 777 /root
 # Some niceties
 ADD assets/dot.bashrc /root/.bashrc
 ADD assets/dot.vimrc /root/.vimrc
+ADD assets/create-user.sh /usr/local/bin/create-user.sh
+RUN chmod 755 /usr/local/bin/create-user.sh
+
+# Default user and group ID
+ENV USERID 1200
+ENV GROUPID 1200
 
 # Install global packages
 ENV NPM_REGISTRY "https://registry.npmjs.org"

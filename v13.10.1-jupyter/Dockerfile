@@ -22,6 +22,8 @@ ENV NODE_PATH "/usr/local/lib/node_modules/:/usr/local/share/.config/yarn/global
 RUN   chmod -R 777 /root
 
 RUN   yarn global add \
+        json-minify \
+        lodash \
         typescript \
         ijavascript ; \
       ijsinstall
