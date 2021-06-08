@@ -10,4 +10,9 @@ Typescript:             3.8.3
 
 Installs IJavaScript for using Node in Jupyter:
 
+```shell
 jupyter notebook --ip 0.0.0.0 --allow-root
+```
+
+Jupyter Notebooks read node_modules in the local folder. That means volatile containers can be used to install modules (yarn add) into the local node_modules and other volatile containers running a Notebook will be able to import or require locally installed modules.
+

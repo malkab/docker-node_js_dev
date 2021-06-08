@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# ---------------------------
+#
+# Common settings for all contexts.
+#
+# ---------------------------
+#
+# Prefix variables with MLKC_.
+#
+# ---------------------------
+
+# The official tag of the Node Docker image to use 
+# as a base
+export MLKC_NODE_VER=14.3.0
