@@ -98,7 +98,8 @@ yarn global add \
   typescript \
   webpack-dev-server \
   http-server \
-  json-minify
+  json-minify \
+  create-react-app
 
 # --------
 #
