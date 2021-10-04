@@ -1,0 +1,8 @@
+name: docker-nodejs_dev
+root: /home/git/docker/docker-node_js_dev
+
+windows:
+  - nodejs_dev: >
+      sleep 1 ;
+      clear ;
+      echo docker-nodejs_dev
