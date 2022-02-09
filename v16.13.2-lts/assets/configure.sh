@@ -99,7 +99,8 @@ yarn global add \
   webpack-dev-server \
   http-server \
   json-minify \
-  create-react-app
+  react-scripts@latest \
+  serve
 
 # --------
 #
