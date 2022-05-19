@@ -23,3 +23,32 @@ This image maps the following users:
 
 - **Linux:** UID / GID from 1000 to 1004;
 - **MacOS:** UID/ GID from 500:20 to 504:20.
+
+
+# Complete Docker Run Example
+
+It looks more or less like this:
+
+```shell
+docker run -ti --rm \
+  -e NODE_ENV=development \
+  -e NODE_MEMORY=2GB \
+  --name airo_experiments_node_dev \
+  --hostname airo_experiments_node_dev \
+  -v $(pwd)/../../:$(pwd)/../../ \
+  -p 3000:3000 \
+  --workdir $(pwd)/../../node \
+  --user 1000:1000 \
+  -v /home/malkab/.npmrc:/root/.npmrc \
+  -v /home/malkab/.npmrc:/home/node/.npmrc \
+  -v /home/malkab/.npmrc:/home/user1001/.npmrc \
+  -v /home/malkab/.npmrc:/home/user1002/.npmrc \
+  -v /home/malkab/.npmrc:/home/user1003/.npmrc \
+  -v /home/malkab/.npmrc:/home/user1004/.npmrc \
+  -v /home/malkab/.npmrc:/home/user500/.npmrc \
+  -v /home/malkab/.npmrc:/home/user501/.npmrc \
+  -v /home/malkab/.npmrc:/home/user502/.npmrc \
+  -v /home/malkab/.npmrc:/home/user503/.npmrc \
+  -v /home/malkab/.npmrc:/home/user504/.npmrc \
+  malkab/nodejs-dev:16.13.2
+```
