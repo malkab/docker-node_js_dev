@@ -77,7 +77,9 @@ echo ---------------------------
 echo pip install
 echo ---------------------------
 echo
-pip3 install mkdocs
+pip3 install \
+  mkdocs \
+  mkdocs-material
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
