@@ -60,7 +60,8 @@ apt-get install -y -f \
   vim \
   x11-apps \
   mlocate \
-  p7zip-full
+  p7zip-full \
+  python3-pip
 
 apt-get -y upgrade
 
@@ -69,6 +70,14 @@ apt-get clean autoclean
 apt-get autoremove --yes
 
 ldconfig
+
+# Install PIP packages
+echo
+echo ---------------------------
+echo pip install
+echo ---------------------------
+echo
+pip3 install mkdocs
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
