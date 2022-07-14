@@ -2,8 +2,8 @@
 
 docker run -ti --rm \
   --user 1000:1000 \
-  -v $(pwd)/../:$(pwd)/../ \
-  --workdir $(pwd)/../node \
+  -v $(pwd):$(pwd) \
+  --workdir $(pwd) \
   -e NODE_ENV=development \
   -e NODE_MEMORY=2GB \
   -v /home/malkab/.npmrc:/root/.npmrc \

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set ups GRASS 7 binaries environment
+# Set up
 ln -fs /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 
 DEBIAN_FRONTEND=noninteractive
@@ -111,6 +111,7 @@ yarn global add \
   http-server \
   json-minify \
   react-scripts@latest \
+  next \
   serve
 
 # --------
