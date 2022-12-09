@@ -165,3 +165,4 @@ usermod -a -G sudo user504
 # Replace sudoers
 rm /etc/sudoers
 mv /sudoers /etc/sudoers
+chmod 0440 /etc/sudoers
