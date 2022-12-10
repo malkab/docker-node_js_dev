@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# -----------------------------------------------------------------
+# --------------------
 #
-# Runs the node FROM base image to test build steps interactively.
+# Runs the Node FROM base image to test build
+# steps interactively.
 #
-# -----------------------------------------------------------------
+# --------------------
 docker run -ti --rm \
   --user 0:0 \
   -v $(pwd):$(pwd) \

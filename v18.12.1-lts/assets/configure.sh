@@ -6,7 +6,7 @@ export LOCALE=es_ES.UTF-8
 # Set up
 ln -fs /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 
-DEBIAN_FRONTEND=noninteractive
+export DEBIAN_FRONTEND=noninteractive
 
 apt-get update
 

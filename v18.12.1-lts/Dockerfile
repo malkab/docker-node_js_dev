@@ -3,6 +3,8 @@ FROM node:18.12.1-bullseye
 LABEL author="Juan Pedro Perez"
 LABEL email="jp.perez.alcantara@gmail.com"
 
+WORKDIR /
+
 # The base image already includes a node user with 1000:1000
 # uid:gid for mapping, but add home files
 ADD assets/dot.bashrc /root/.bashrc
